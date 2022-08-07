@@ -9,24 +9,26 @@ import java.util.Scanner;
 public class SomaImpares {
 
     public static void main(String[] args) {
-        System.out.println(soma(1, 3));
+        System.out.println(soma());
 
     }
 
-    public static int soma(int nInicio, int nFinal) {
+    public static int soma() {
         int so = 0;
         Scanner numero = new Scanner(System.in);
         System.out.print("Digite o número de inicio: ");
-        nInicio = numero.nextInt();
+        int n = numero.nextInt();
         System.out.print("Digite o número final: ");
-        nFinal = numero.nextInt();
-        for (int i = nInicio; i <= nFinal; i++) {
+        int m = numero.nextInt();
+        for (int i = n; i <= m; i++) {
             if (i % 2 != 0) {
                 so += i;
 
             }
-
+            numero.close();
         }
         return so;
+
     }
+
 }
